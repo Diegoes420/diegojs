@@ -13,13 +13,13 @@ let precioProductoD = 7500
 let stockProductoD = 50
 
 
-let cantidadCompras = prompt("Ingrese el productos o servicios que quiere comprar: \n- Implantes\n- Endodoncia\n- Blanqueamiento\n- Placa de Relajacion").toLowerCase
+let cantidadCompras = prompt("Ingrese la cantidad de productos o servicios que quiere comprar: \n- Implantes\n- Endodoncia\n- Blanqueamiento\n- Placa de Relajacion").toLowerCase()
 let precioTotal = 0;
 
 
 for(let i = 0; i < cantidadCompras; i++){
 
-    let compra1 = prompt ("ingrese el nombre del producto o servicio que quiere comprar: \n- Implantes\n- Endodoncia\n- Blanqueamiento\n- Placa de Relajacion").toLowerCase() .Str.trim()
+    let compra1 = prompt ("ingrese el nombre del producto o servicio que quiere comprar: \n- Implantes\n- Endodoncia\n- Blanqueamiento\n- Placa de Relajacion").toLowerCase().trim()
     let cantidad1 = prompt("Ingrese la cantidad del producto/servicio que quiere comprar:")
 
     if(compra1 == "Implantes".toLowerCase()){
@@ -43,6 +43,9 @@ for(let i = 0; i < cantidadCompras; i++){
         if(stockProductoD >= cantidad1){
             precioTotal += cantidad1 * precioProductoB
             alert("El precio total es de: $" + (cantidad1 * precioProductoB))
+        }
+        else{
+            alert("No disponemos esa cantidad en stock. Nuestro Stock actual es de: " + stockProductoD)
         }
     }        
         
