@@ -63,21 +63,25 @@ for(let i = 0; i < cantidadCompras; i++){
 }
 
 switch(true){
-    case precioTotal < 25000 && precioTotal > 15000:
+    case precioTotal < 25000:
+        precioTotal = precioTotal * 1
+        alert("Para obtener descuento su compra debe ser superior a $25.000")
+        break;
+    case precioTotal > 25000:
         precioTotal = precioTotal * 0.95
         alert("Recibiste un descuento del 5% de descuento por tu compra")
         break;
-    case precioTotal < 50000:
+    case precioTotal > 100000:
         precioTotal = precioTotal * 0.90
         alert("Recibiste un descuento del 10% de descuento por tu compra")
         break;
-    case precioTotal < 100000:
+    case precioTotal < 150000:
         precioTotal = precioTotal * 0.85
         alert("Recibiste un descuento del 15% de descuento por tu compra")
         break;
-    case precioTotal > 100000:
-        alert("Recibiste un descuento del 40% de descuento por tu compra")
-        precioTotal = precioTotal * 0.60
+    case precioTotal > 150000:
+        alert("Recibiste un descuento del 20% de descuento por tu compra")
+        precioTotal = precioTotal * 0.80
         break;
     default:
         console.log(precioTotal)
